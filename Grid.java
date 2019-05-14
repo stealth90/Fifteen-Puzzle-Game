@@ -9,24 +9,24 @@ public class Grid {
     public void shuffleGrid(){
         this.gridOfGame=new int[4][4];
         Random rand = new Random();
-        Integer[] randomNumber= new Integer[16];
+        Integer[] randomNumbers= new Integer[16];
         int counter=0;
         int numberControl=1;
         int position=0;
-        for(int r=0;r<randomNumber.length; ){
-            int prova=rand.nextInt(16);
+        for(int r=0;r<randomNumbers.length; ){
+            int randomNumber=rand.nextInt(16);
             if(r==0) {
-                randomNumber[r]=prova;
+                randomNumbers[r]=randomNumber;
                 r++;
             }
             else{
                 for(int j=0;j<numberControl;j++){
-                    if(prova!=randomNumber[j]){
+                    if(randomNumber!=randomNumbers[j]){
                         ++counter;
                     }
                 }
                 if(counter==numberControl){
-                    randomNumber[r]=prova;
+                    randomNumbers[r]=randomNumber;
                     r++;
                     ++numberControl;
                 }
